@@ -1,0 +1,280 @@
+.home-container {
+  min-height: 80dvh;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.image-sec-layer {
+  z-index: -1;
+  position: relative;
+  padding: 10px;
+  margin-left: 80px;
+  margin-right: 20px;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #fff 0%,
+    #fff 25%,
+    transparent 25%,
+    transparent 50%
+  );
+  animation: rot 4s infinite;
+}
+
+.image-first-layer {
+  background-color: rgb(34, 30, 30);
+}
+
+.profile-image {
+  height: 450px;
+  width: 370px;
+  padding: 10px;
+
+  filter: brightness(40%), contrast(20%);
+}
+.text-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.details-con {
+  width: max-content;
+  height: 280px;
+  padding: 18px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 6px 6px 0px#fff;
+}
+.name-text {
+  font-size: 42px;
+  color: aliceblue;
+}
+.desc-text {
+  color: #fff;
+  font-family: cursive;
+  font-size: 22px;
+}
+
+.name {
+  color: chocolate;
+  color: rgb(91, 129, 204);
+}
+
+.html-el::after {
+  content: ' />';
+}
+
+.html-el::before {
+  content: '<';
+}
+
+.tool {
+  position: absolute;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  font-family: cursive;
+}
+
+.html-el {
+  top: 5%;
+  left: 2%;
+  animation: -3s blink 5s infinite;
+}
+.css-el {
+  top: 10%;
+  right: 20%;
+  animation: -1s blink 5s infinite;
+}
+
+.py-el {
+  left: -2%;
+  bottom: 23%;
+  animation: -2s blink 5s infinite;
+}
+.js-el {
+  right: 45%;
+  bottom: 10%;
+  animation: -0.5s blink 5s infinite;
+}
+.react-el {
+  top: 17%;
+  left: 30%;
+  animation: -1.5s blink 5s infinite;
+}
+
+.sql-el {
+  top: 40%;
+  right: 6%;
+  animation: -4s blink 5s infinite;
+}
+.node-el {
+  bottom: 18%;
+  right: 10%;
+  animation: -2.5s blink 5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+}
+@media (max-width: 575px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    gap: 10px;
+  }
+  .profile-image {
+    height: 180px;
+    width: 180px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+  .image-sec-layer {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+    margin-top: 20px;
+
+    animation: rot1 8s infinite linear;
+  }
+  .image-first-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .text-con {
+    height: 62vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .details-con {
+    width: 90vw;
+    height: auto;
+    padding: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    box-shadow: 6px 6px 0px#fff;
+    margin: 0;
+  }
+  .name-text {
+    font-size: 30px;
+  }
+  .name {
+    display: block;
+  }
+  .desc-text {
+    color: #fff;
+    font-family: 'Lucida Console', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+  }
+  .html-el::after {
+    content: '/>';
+  }
+
+  .html-el::before {
+    content: '<';
+  }
+
+  .tool {
+    position: absolute;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  .html-el {
+    top: 0%;
+    left: 0%;
+    animation: -3s blink 5s infinite;
+  }
+  .css-el {
+    top: 17%;
+    left: 70%;
+    animation: -1s blink 5s infinite;
+  }
+
+  .py-el {
+    left: 50%;
+    bottom: 15%;
+    animation: -2s blink 5s infinite;
+  }
+  .js-el {
+    left: 3%;
+    bottom: 6%;
+    animation: -0.5s blink 5s infinite;
+  }
+  .react-el {
+    top: 3%;
+    left: 55%;
+    animation: -1.5s blink 5s infinite;
+  }
+
+  .sql-el {
+    top: 88%;
+    right: 12%;
+
+    animation: -4s blink 5s infinite;
+  }
+  .node-el {
+    left: 15%;
+    top: 12%;
+    animation: -2.5s blink 5s infinite;
+  }
+}
+.hl-text {
+  color: rgb(135, 164, 221);
+  font-weight: bold;
+}
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rot {
+  0% {
+    --a: 0deg;
+  }
+  50% {
+    --a: 90deg;
+  }
+}
+@keyframes rot1 {
+  0% {
+    --a: 0deg;
+  }
+  50% {
+    --a: 180deg;
+  }
+}

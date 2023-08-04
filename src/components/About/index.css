@@ -1,0 +1,35 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 100vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 28px;
+  padding: 10px;
+  /* background-color: #6d396b; */
+}
+
+.anchor-class {
+  text-decoration: none;
+  color: #38aa9c;
+}
+
+@media (max-width: 575px) {
+  .about-container {
+    font-size: 24px;
+  }
+  .about-heading {
+    font-size: 48px;
+  }
+  .anchor-class {
+    display: block;
+    font-size: medium;
+    text-decoration: none;
+  }
+}
+.span-element {
+  text-shadow: 0 0 3px #38aa9c30, 0 0 2px #38aa9c30;
+  color: #38aa9c;
+}
