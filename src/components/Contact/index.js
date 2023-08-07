@@ -13,12 +13,21 @@ const Contact = () => (
       ))}
     </div>
     <div className="cont-div">
-      <p className="mail">
-        <BiLogoGmail size={20} />: reddybharshith3@gmail.com{' '}
-      </p>
-      <p className="mail">
-        <BiPhone size={20} />: 6281715949{' '}
-      </p>
+      <a
+        href="mailto:reddybharshith3@gmail.com"
+        target="_blank"
+        rel="noreferrer"
+        className="contact-an"
+      >
+        <p className="mail">
+          <BiLogoGmail size={20} />: reddybharshith3@gmail.com{' '}
+        </p>
+      </a>
+      <a href="tel:Number" className="contact-an">
+        <p className="mail">
+          <BiPhone size={20} /> : 62XXXXXXXX
+        </p>
+      </a>
     </div>
   </div>
 )

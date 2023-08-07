@@ -31,7 +31,7 @@
     transparent 25%,
     transparent 50%
   );
-  animation: rot 4s infinite;
+  animation: rot1 4s infinite;
   /* backface-visibility: hidden; */
 }
 
@@ -50,15 +50,18 @@
 .image-first-layer {
   background-color: rgb(34, 30, 30);
   padding: 10px;
+  /* border-radius: 50%; */
 }
 
 .profile-image {
-  height: 450px;
+  /* height: 450px; */
   width: 320px;
-
+  height: 320px;
+  /* border-radius: 50%; */
+  object-fit: cover;
   /* padding: 10px; */
   /* box-shadow: 0px 0px 5px 0px; */
-  filter: contrast(90%) brightness(60%);
+  filter: contrast(90%) brightness(50%) saturate(180%);
 }
 .text-con {
   display: flex;
