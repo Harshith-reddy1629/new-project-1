@@ -1,0 +1,385 @@
+.home-container {
+  min-height: 80dvh;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  animation: opa 1s ease-in forwards;
+}
+
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.image-sec-layer {
+  transform-style: preserve-3d;
+  z-index: -1;
+  position: relative;
+  padding: 10px;
+  margin-left: 80px;
+  margin-right: 20px;
+  background: repeating-conic-gradient(
+    from var(--a),
+    #fff 0%,
+    #fff 25%,
+    transparent 25%,
+    transparent 50%
+  );
+  animation: rot 4s infinite;
+  /* backface-visibility: hidden; */
+}
+
+@keyframes opacy {
+  0% {
+    transform: translate(0%, 0%) scale(0.9);
+  }
+  /* 50% {
+    transform: translate(0%, 0%) scalex(0);
+  } */
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.image-first-layer {
+  background-color: rgb(34, 30, 30);
+  padding: 10px;
+}
+
+.profile-image {
+  height: 450px;
+  width: 320px;
+
+  /* padding: 10px; */
+  /* box-shadow: 0px 0px 5px 0px; */
+  filter: contrast(90%) brightness(60%);
+}
+.text-con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.details-con {
+  width: max-content;
+  height: 280px;
+  padding: 18px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  box-shadow: 6px 6px 0px#fff;
+  animation: updown 0.9s;
+}
+.name-text {
+  font-size: 42px;
+  color: aliceblue;
+  transform: ani 0.8s forwards;
+  animation: updown1 1s ease-out forwards;
+}
+@keyframes updown {
+  0% {
+    transform: translate(0%, -100%);
+  }
+  100% {
+    transform: translate(0px, 0%);
+  }
+}
+@keyframes updown1 {
+  0% {
+    transform: translate(0%, -200%);
+  }
+  100% {
+    transform: translate(0px, 0%);
+  }
+}
+@keyframes sideTr {
+  0% {
+    transform: translate(-100%, 00%);
+  }
+  100% {
+    transform: translate(0px, 0%);
+  }
+}
+.desc-text {
+  color: #fff;
+  font-family: cursive;
+  font-size: 22px;
+  animation: moving 0.9s ease-out forwards;
+}
+@keyframes moving {
+  0% {
+    transform: translate(100%, 0px);
+  }
+  100% {
+    transform: translate(0%, 0px);
+  }
+}
+.home-para-text {
+  animation: downup 0.9s ease-out forwards;
+}
+
+@keyframes downup {
+  0% {
+    transform: translate(100%, 00%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+
+.name {
+  color: chocolate;
+  color: rgb(91, 129, 204);
+}
+
+.html-el::after {
+  content: ' />';
+}
+
+.html-el::before {
+  content: '<';
+}
+
+.tool {
+  position: absolute;
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  font-family: cursive;
+}
+
+.html-el {
+  top: 5%;
+  left: 2%;
+  animation: -3s blink 5s infinite;
+}
+.css-el {
+  top: 10%;
+  right: 20%;
+  animation: -1s blink 5s infinite;
+}
+
+.py-el {
+  left: -2%;
+  bottom: 23%;
+  animation: -2s blink 5s infinite;
+}
+.js-el {
+  right: 45%;
+  bottom: 10%;
+  animation: -0.5s blink 5s infinite;
+}
+.react-el {
+  top: 17%;
+  left: 30%;
+  animation: -1.5s blink 5s infinite;
+}
+
+.sql-el {
+  top: 40%;
+  right: 6%;
+  animation: -4s blink 5s infinite;
+}
+.node-el {
+  bottom: 18%;
+  right: 10%;
+  animation: -2.5s blink 5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }
+}
+@media (max-width: 575px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    overflow: scroll;
+    gap: 10px;
+  }
+  .profile-image {
+    height: 180px;
+    width: 180px;
+    /* padding: 5px; */
+    border-radius: 50%;
+    object-fit: cover;
+    /* object-position: center; */
+    filter: none;
+  }
+  .image-sec-layer {
+    padding: 5px;
+    margin: 5px;
+    /* border-radius: 50%; */
+    margin-top: 20px;
+
+    animation: rot1 8s 0.9s infinite linear;
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .image-first-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  .text-con {
+    height: 62vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .details-con {
+    width: 90vw;
+    height: auto;
+    padding: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 12px;
+    border: 1px solid #fff;
+    box-shadow: 6px 6px 0px#fff;
+    margin: 0;
+  }
+  .name-text {
+    font-size: 30px;
+    animation: none;
+  }
+  .name {
+    display: block;
+    animation: ani 0.9s ease-out forwards;
+  }
+  @keyframes ani {
+    0% {
+      transform: translate(-100%, 0px);
+      -o-transform: translate(-100%, 0px);
+      -webkit-transform: translate(-100%, 0px);
+      -moz-transform: translate(-100%, 0px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+      -o-transform: translate(0%, 0px);
+      -webkit-transform: translate(0%, 0px);
+      -moz-transform: translate(0%, 0px);
+    }
+  }
+
+  .desc-text {
+    color: #fff;
+    font-family: 'Lucida Console', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+  }
+  .html-el::after {
+    content: '/>';
+  }
+
+  .html-el::before {
+    content: '<';
+  }
+
+  .tool {
+    position: absolute;
+    font-size: medium;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+
+  .html-el {
+    top: 0%;
+    left: 3%;
+    animation: -3s blink 5s infinite;
+  }
+  .css-el {
+    top: 17%;
+    left: 70%;
+    animation: -1s blink 5s infinite;
+  }
+
+  .py-el {
+    left: 50%;
+    bottom: 15%;
+    animation: -2s blink 5s infinite;
+  }
+  .js-el {
+    left: 3%;
+    bottom: 6%;
+    animation: -0.5s blink 5s infinite;
+  }
+  .react-el {
+    top: 3%;
+    left: 55%;
+    animation: -1.5s blink 5s infinite;
+  }
+
+  .sql-el {
+    top: 88%;
+    right: 12%;
+
+    animation: -4s blink 5s infinite;
+  }
+  .node-el {
+    left: 15%;
+    top: 12%;
+    animation: -2.5s blink 5s infinite;
+  }
+}
+.hl-text {
+  color: rgb(135, 164, 221);
+  font-weight: bold;
+}
+@property --a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rot {
+  0% {
+    --a: 0deg;
+  }
+  50% {
+    --a: 90deg;
+  }
+}
+@keyframes rot1 {
+  0% {
+    --a: 0deg;
+  }
+  50% {
+    --a: 180deg;
+  }
+}

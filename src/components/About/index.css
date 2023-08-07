@@ -1,0 +1,232 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  min-height: 100vh;
+  overflow-y: scroll;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 28px;
+  padding: 10px;
+  animation: opa 1s ease-in forwards;
+}
+.education-container {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  animation: headingTr 0.9s;
+  border-top: 8px double white;
+  border-bottom: 8px double white;
+  border-left: 4px solid white;
+  border: 4px solid white;
+  padding: 30px;
+}
+
+.horizantal-br {
+  height: 260px;
+  padding: 1px;
+  background-color: #fff;
+  animation: brTr 0.9s;
+}
+@keyframes brTr {
+  0% {
+    transform: translateY(100%);
+  }
+}
+.education-heading {
+  font-size: 32px;
+  text-decoration: underline;
+  text-decoration-color: #38aa9c;
+  animation: headingTr 0.9s;
+}
+@keyframes headingTr {
+  0% {
+    transform: translateX(-50vw);
+  }
+}
+.location-span {
+  font-size: 12px;
+}
+.institute-name {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.education-list-container {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  /* animation: eduTr 0.9s; */
+}
+.cont {
+  /* animation: eduTr 0.9s; */
+}
+@keyframes eduTr {
+  0% {
+    transform: translateX(100%);
+  }
+}
+.education-list-item {
+  font-size: medium;
+  margin: 0;
+  padding: 0%;
+}
+.skills-heading {
+  padding: 0;
+  margin: 0;
+  font-size: 32px;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  color: #38aa9c;
+  animation: skiTr 0.9s;
+  /* margin-bottom: 10px;
+  margin-left: 20px; */
+}
+@keyframes skiTr {
+  0% {
+    transform: translateX(50vh);
+  }
+}
+.skills-info-container {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.skills-container {
+  margin: 0;
+  padding: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+@media (max-width: 575px) {
+  .skills-info-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+  .skills-br {
+    display: none;
+  }
+  .skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+  .education-list-item {
+    font-size: 16px;
+  }
+}
+
+.skills-br {
+  display: none;
+  height: 150px;
+  margin: 15px;
+  padding: 1px;
+  background-color: #fff;
+}
+
+.inst-anchor {
+  color: #38aa9c;
+  text-decoration: none;
+}
+.inst-anchor:hover {
+  color: #38aa9c;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+@media (max-width: 575px) {
+  .education-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .horizantal-br {
+    display: none;
+  }
+  .institute-name {
+    margin-top: 8px;
+  }
+}
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.anchor-class {
+  text-decoration: none;
+  color: #38aa9c;
+}
+
+@media (max-width: 575px) {
+  .about-container {
+    font-size: 24px;
+    overflow: scroll;
+    width: 100vw;
+  }
+  .about-heading {
+    font-size: 48px;
+  }
+  .anchor-class {
+    display: block;
+    font-size: medium;
+    text-decoration: none;
+  }
+}
+.span-element {
+  text-shadow: 0 0 3px #38aa9c30, 0 0 2px #38aa9c30;
+  color: #38aa9c;
+}
+
+.section-text {
+  text-align: center;
+  animation: t1 0.9s ease-out forwards;
+}
+.about-name-text {
+  animation: t2 0.9s ease-out forwards;
+}
+.viewer-text {
+  animation: t3 0.9s ease-in-out forwards;
+}
+@keyframes t1 {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes t2 {
+  0% {
+    transform: translate(-100vw, 0%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes t3 {
+  0% {
+    transform: translate(100vw, 0vh);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
